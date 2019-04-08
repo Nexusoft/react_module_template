@@ -26,6 +26,9 @@ class App extends React.Component {
     on('initialize', (evt, { theme }) => {
       this.setState({ initialized: true, theme });
     });
+    on('theme-updated', (evt, { theme }) => {
+      this.setState({ theme });
+    });
   }
 
   render() {
