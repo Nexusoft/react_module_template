@@ -1,7 +1,7 @@
 const {
   libraries: { React },
   components: { GlobalStyles, Panel },
-} = nexusWallet;
+} = NEXUS;
 
 const App = () => (
   <Panel title="React Module Example" icon={{ url: 'react.svg', id: 'icon' }}>

@@ -2,6 +2,6 @@ import App from './App';
 
 const {
   libraries: { React, ReactDOM },
-} = nexusWallet;
+} = NEXUS;
 
 ReactDOM.render(<App />, document.getElementById('root'));
