@@ -1,0 +1,15 @@
+{
+  "verification": {
+    "signature": "T9DZ9XMjycmUdgWkfoZT46A2wFd2gYK+bW1X4kFRAQF6ZLlb/FbTFYPXiagwxv+zPyYMMh9O7Mo64kXJQOpsquDZ/xs072Jrsy81fq1vsRQxBxcOafqWvpz6M1knTcR8h67fUBMpcUfPnVHmTGC4V12KNBMN0E1ecff+T7jgmtqN3uhspI829xnOH/X3TdICIAU/sEOSopjwxOKGW9y7Yimc6qMwInlNaBOi3AAasR1LDhgJsm5G738F3XFRiDEhPH+9ZWdEz4M2q0q9B15FVyG/9n8hV21QM8i5oSZtN91aie9VlhaszMOb0tWz+Q6FUv0MqeLIh0AHOGF54rzRhw=="
+  },
+  "data": {
+    "repository": {
+      "type": "git",
+      "host": "github.com",
+      "owner": "Nexusoft",
+      "repo": "react_module_example",
+      "commit": "a3481f0f06d5c8b03dd670473a895768e1a67167"
+    },
+    "moduleHash": "jt61LvBRUUUzPpilywKrJ1D12lbDul3Jex9Po0/iATQ="
+  }
+}
