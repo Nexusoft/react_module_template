@@ -6,7 +6,7 @@ const {
 const App = () => (
   <Panel title="React Module Example" icon={{ url: 'react.svg', id: 'icon' }}>
     <GlobalStyles />
-    <div className="mt1">This is a Nexus Module built with React</div>
+    <div className="mt1">This module is built on React</div>
   </Panel>
 );
 

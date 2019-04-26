@@ -23,10 +23,10 @@ class App extends React.Component {
 
   constructor(props) {
     super(props);
-    listen('initialize', (evt, { theme }) => {
+    listen('initialize', ({ theme }) => {
       this.setState({ initialized: true, theme });
     });
-    listen('theme-updated', (evt, { theme }) => {
+    listen('theme-updated', theme => {
       this.setState({ theme });
     });
   }
