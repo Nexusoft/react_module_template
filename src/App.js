@@ -9,8 +9,7 @@ const {
       theming: { ThemeProvider },
     },
   },
-  utilities: { color },
-  ipc: { listen },
+  utilities: { color, onceInitialize, onThemeUpdated },
 } = NEXUS;
 
 const emotionCache = createCache({ container: document.head });
@@ -23,10 +22,10 @@ class App extends React.Component {
 
   constructor(props) {
     super(props);
-    listen('initialize', ({ theme }) => {
+    onceInitialize(({ theme }) => {
       this.setState({ initialized: true, theme });
     });
-    listen('theme-updated', theme => {
+    onThemeUpdated(theme => {
       this.setState({ theme });
     });
   }
