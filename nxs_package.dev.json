@@ -1,0 +1,7 @@
+{
+  "name": "_dev_simple_react_module_example",
+  "displayName": "Simple React Module Development",
+  "type": "app",
+  "entry": "http://localhost:24011/dev.html",
+  "icon": "dist/react.svg"
+}
