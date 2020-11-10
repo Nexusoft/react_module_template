@@ -1,6 +1,7 @@
 {
-  "name": "_dev_simple_react_module_example",
+  "name": "_dev_react_module_template",
   "displayName": "Simple React Module Development",
+  "description": "A simple Nexus Wallet Module template built with React",
   "type": "app",
   "entry": "http://localhost:24011/dev.html",
   "icon": "dist/react.svg"

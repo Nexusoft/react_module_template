@@ -1,9 +1,9 @@
 {
-  "name": "simple_react_module_example",
+  "name": "react_module_template",
   "displayName": "Simple React Module",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "targetWalletVersion": "2.2.0",
-  "description": "This is an example of how a Nexus Module can be built with React",
+  "description": "A simple Nexus Wallet Module template built with React",
   "type": "app",
   "entry": "dist/index.html",
   "icon": "dist/react.svg",
