@@ -14,39 +14,30 @@ const {
 
 const emotionCache = createCache({ container: document.head });
 
-class App extends React.Component {
-  state = {
-    initialized: false,
-    theme: {},
+export default function App() {
+  const [initialized, setInitialized] = React.useState(false);
+  const [theme, setTheme] = React.useState({});
+  React.useEffect(() => {
+    onceInitialize(({ theme }) => {
+      setInitialized(true);
+      setTheme(theme);
+    });
+    onThemeUpdated((theme) => {
+      setTheme(theme);
+    });
+  }, []);
+
+  if (!initialized) return null;
+  const themeWithMixer = {
+    ...theme,
+    mixer: color.getMixer(theme.background, theme.foreground),
   };
 
-  constructor(props) {
-    super(props);
-    onceInitialize(({ theme }) => {
-      this.setState({ initialized: true, theme });
-    });
-    onThemeUpdated(theme => {
-      this.setState({ theme });
-    });
-  }
-
-  render() {
-    const { initialized, theme } = this.state;
-    if (!initialized) return null;
-
-    const themeWithMixer = {
-      ...theme,
-      mixer: color.getMixer(theme.background, theme.foreground),
-    };
-
-    return (
-      <CacheProvider value={emotionCache}>
-        <ThemeProvider theme={themeWithMixer}>
-          <Main />
-        </ThemeProvider>
-      </CacheProvider>
-    );
-  }
+  return (
+    <CacheProvider value={emotionCache}>
+      <ThemeProvider theme={themeWithMixer}>
+        <Main />
+      </ThemeProvider>
+    </CacheProvider>
+  );
 }
-
-export default App;
