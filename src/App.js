@@ -6,10 +6,10 @@ const {
     emotion: {
       createCache,
       core: { CacheProvider },
-      theming: { ThemeProvider },
     },
   },
-  utilities: { color, onceInitialize, onThemeUpdated },
+  components: { ThemeController },
+  utilities: { onceInitialize, onThemeUpdated },
 } = NEXUS;
 
 const emotionCache = createCache({ container: document.head });
@@ -28,16 +28,12 @@ export default function App() {
   }, []);
 
   if (!initialized) return null;
-  const themeWithMixer = {
-    ...theme,
-    mixer: color.getMixer(theme.background, theme.foreground),
-  };
 
   return (
     <CacheProvider value={emotionCache}>
-      <ThemeProvider theme={themeWithMixer}>
+      <ThemeController theme={theme}>
         <Main />
-      </ThemeProvider>
+      </ThemeController>
     </CacheProvider>
   );
 }
