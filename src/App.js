@@ -12,7 +12,7 @@ const {
   utilities: { onceInitialize, onThemeUpdated },
 } = NEXUS;
 
-const emotionCache = createCache({ container: document.head });
+const emotionCache = createCache({ container: document.head, key: 'emotion' });
 
 export default function App() {
   const [initialized, setInitialized] = React.useState(false);
