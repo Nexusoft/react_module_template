@@ -1,3 +1,4 @@
 node_modules
 dist/js
 repo_info.json
+storage.json
