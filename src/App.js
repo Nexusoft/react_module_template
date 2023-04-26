@@ -4,12 +4,12 @@ const {
   libraries: {
     React,
     emotion: {
-      createCache,
-      core: { CacheProvider },
+      cache: createCache,
+      react: { CacheProvider },
     },
   },
   components: { ThemeController },
-  utilities: { onceInitialize, onThemeUpdated },
+  utilities: { onceInitialize, onWalletDataUpdated },
 } = NEXUS;
 
 const emotionCache = createCache({ container: document.head, key: 'emotion' });
@@ -22,8 +22,10 @@ export default function App() {
       setInitialized(true);
       setTheme(theme);
     });
-    onThemeUpdated((theme) => {
-      setTheme(theme);
+    onWalletDataUpdated(({ theme }) => {
+      if (theme) {
+        setTheme(theme);
+      }
     });
   }, []);
 
