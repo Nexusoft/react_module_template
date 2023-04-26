@@ -1,6 +1,6 @@
 {
   "name": "react_module_template",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A simple Nexus Wallet Module template built with React",
   "devDependencies": {
     "@babel/core": "^7.16.5",
