@@ -1,7 +1,7 @@
 import App from './App';
 
 const {
-  libraries: { React, ReactDOM },
+  libraries: { ReactDOM },
 } = NEXUS;
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.client.createRoot(document.getElementById('root')).render(<App />);

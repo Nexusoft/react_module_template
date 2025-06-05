@@ -23,4 +23,13 @@ export default {
       },
     ],
   },
+  resolve: {
+    alias: {
+      'react/jsx-runtime$': path.resolve(__dirname, 'libs/react/jsx-runtime'),
+      'react/jsx-dev-runtime$': path.resolve(
+        __dirname,
+        'libs/react/jsx-dev-runtime'
+      ),
+    },
+  },
 };

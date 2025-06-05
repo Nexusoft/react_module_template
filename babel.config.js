@@ -1,6 +1,5 @@
 const reactOptimizePreset = [
   '@babel/plugin-transform-react-constant-elements',
-  '@babel/plugin-transform-react-inline-elements',
   'babel-plugin-transform-react-remove-prop-types',
   'babel-plugin-transform-react-pure-class-to-function',
 ];
@@ -19,10 +18,10 @@ module.exports = function (api) {
         '@babel/preset-env',
         {
           // Replace this with the Electron version that your target Nexus Wallet version uses
-          targets: { electron: '8.2.3' },
+          targets: { electron: '26.6.10' },
         },
       ],
-      ['@babel/preset-react', { development }],
+      ['@babel/preset-react', { development, runtime: 'automatic' }],
     ],
     plugins: [
       ['@babel/plugin-proposal-optional-chaining', { loose: false }],
